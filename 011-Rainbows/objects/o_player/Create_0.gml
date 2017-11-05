@@ -4,3 +4,5 @@
 phy_fixed_rotation = true
 
 facing_right = true
+
+fire_timer = 0

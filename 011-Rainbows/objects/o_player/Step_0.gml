@@ -11,9 +11,11 @@ if keyboard_check(ord("A")) {
 	phy_speed_x = 0	
 }
 
-if keyboard_check(vk_space) {
+if keyboard_check(vk_space) && fire_timer <= 0 {
 	instance_create_depth(x + (facing_right ? 32 : -(32 + 192)), y, depth, o_rainbow)
+	fire_timer = 10
 }
+fire_timer--
 
 colliding_rainbow = collision_line(x, y-16, x, y, o_rainbow, true, true)
 if colliding_rainbow != noone {
