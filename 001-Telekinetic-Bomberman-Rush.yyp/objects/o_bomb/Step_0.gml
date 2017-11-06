@@ -1,4 +1,4 @@
-if image_index == 9 {
+if image_index >= 9 {
 	x_pos = round(x / 32) * 32
 	y_pos = round(y / 32) * 32
 	instance_create_depth(x_pos, y_pos, depth, o_explosion_controller)
